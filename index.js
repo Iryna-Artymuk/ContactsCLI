@@ -15,14 +15,13 @@ const  invokeAction=async ({ action, id, name, email, phone })=> {
       break;
 
     case 'add':
-     
-      const newContact = await contactsService.getContactById({name,email,phone})
-      console.log('newContact: ', newContact);
+    const newContact=await contactsService.addContact({name,email,phone})
+    console.log('newContact: ', newContact);
      
       break;
 
     case 'delete':
-        const deletedContact = await contactsService.getContactById(id)
+        const deletedContact = await contactsService.deleteContact(id)
         console.log('deletedContact : ', deletedContact );
       
       break;
@@ -33,5 +32,6 @@ const  invokeAction=async ({ action, id, name, email, phone })=> {
 }
 
 // invokeAction(argv);
- invokeAction({action:"list"});
+//  invokeAction({action:"add", name:"Iryna2",email:"Artimyk@ukr,net", phone:"380666796604"});
+ invokeAction({action:"delete", id:"C9I9OtvvF-OaFZm9_uRQ7"});
 
