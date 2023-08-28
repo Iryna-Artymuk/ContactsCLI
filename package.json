@@ -5,14 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app",
-    "dev": "nodemon app",
+    "start": "node index",
+    "dev": "nodemon index",
     "commit": "cz"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "nanoid": "^3.3.4"
+  },
+  "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "init": "^0.1.2",
     "nodemon": "^3.0.1"
   }
 }
